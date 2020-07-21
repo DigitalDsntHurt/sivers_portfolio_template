@@ -14,16 +14,35 @@
  *= require_self
  */
 
+
 body{
 	background-color: black;
 	padding: 0 2vw;
 	margin: -8vh 0 12vh 0;
 }
 
+@media only screen and (min-width: 900px) {
+	body{
+		background-color: black;
+		padding: 0 15vw 0 5vw;
+		margin: -8vh 0 12vh 0;
+	}	
+}
+
 h1{
 	color: #3b8524;
 	font-size: 6em;
 	font-family: 'Crimson Text', serif;
+	margin-bottom: -2vh;
+}
+
+a.header-link{
+	color: #3b8524;
+	text-decoration: none;
+}
+a.header-link:hover{
+	color: #3b8524;
+	text-decoration: underline;
 }
 
 h2{
@@ -38,10 +57,21 @@ h3{
 	font-family: 'Crimson Text', serif;
 }
 
+h4{
+	color: #3b8524;
+	font-size: 1.8em;
+	font-family: 'Crimson Text', serif;
+	margin-bottom: -1vh;
+}
+
 p{
 	color: #cccccc;
 	font-size: 1.4em;
 	font-family: 'Montserrat', sans-serif;
+}
+
+.indented-paragraph{
+	text-indent: 2vw;
 }
 
 a{
@@ -53,3 +83,154 @@ a:hover{
 		color: #868bf7;
 		text-decoration: underline;
 }
+
+
+
+.italic{
+	font-style: italic;
+}
+.bold{
+	font-weight: bold;
+}
+.small{
+	font-size: 0.7em;
+}
+
+
+
+
+
+
+
+
+
+/* TABLE STYLES */
+
+.portfolio-project-meta-table{
+	color: white;
+	width: 100%;
+}
+
+.portfolio-project-meta-table th{
+	text-align: center;
+	font-weight: bold;
+	color: #cccccc;
+	font-size: 1.2em;
+	font-family: 'Montserrat', sans-serif;
+}
+.portfolio-project-meta-table td{
+	text-align: center;
+	color: #cccccc;
+	font-size: 0.8em;
+	font-family: 'Montserrat', sans-serif;
+	width: 16%;
+}
+
+@media only screen and (min-width: 900px) {
+	.portfolio-project-meta-table{
+		color: white;
+		width: 100%;
+	}
+}
+
+hr.project-divider{
+	border-top: 2px solid #3b8524;
+	margin: 8vh 0;
+}
+
+/*
+*/
+/**/
+/**//**/
+
+table.detail-table {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.detail-table tr {
+  background-color: black;
+  border: 1px solid #cccccc;
+  padding: .35em;
+}
+
+table.detail-table td {
+  padding: .625em;
+  text-align: center;
+  vertical-align: top;
+  color: #cccccc;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+}
+
+table.detail-table th {
+  color: #cccccc;
+  font-size: 1em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .625em;
+  width: 16%;
+  text-align: center;
+  vertical-align: bottom;
+  font-family: 'Crimson Text', serif;
+}
+
+@media screen and (max-width: 700px) {
+  table.detail-table {
+    border: 0;
+  }
+  
+  table.detail-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table.detail-table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table.detail-table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  table.detail-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Crimson Text', serif;
+  }
+  
+  table.detail-table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
