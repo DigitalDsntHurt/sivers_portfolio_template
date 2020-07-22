@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :projects
   get 'pages/resume'
   get 'pages/intention'
   get 'pages/contact'
