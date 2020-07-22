@@ -18,14 +18,14 @@
 body{
 	background-color: black;
 	padding: 0 2vw;
-	margin: -8vh 0 12vh 0;
+	margin: -2vh 0 12vh 0;
 }
 
 @media only screen and (min-width: 900px) {
 	body{
 		background-color: black;
 		padding: 0 15vw 0 5vw;
-		margin: -8vh 0 12vh 0;
+		margin: 0 0 12vh 0;
 	}	
 }
 
@@ -33,7 +33,7 @@ h1{
 	color: #3b8524;
 	font-size: 6em;
 	font-family: 'Crimson Text', serif;
-	margin-bottom: -2vh;
+	margin-bottom: 8vh;
 }
 
 a.header-link{
@@ -49,6 +49,7 @@ h2{
 	color: #3b8524;
 	font-size: 3em;
 	font-family: 'Crimson Text', serif;
+  margin-bottom: 2vh;
 }
 
 h3{
@@ -223,14 +224,61 @@ table.detail-table th {
 }
 
 
+/* admin classes */
+
+.admin-container{
+    border: solid 1px #cccccc;
+    width: 60vw;
+    margin: auto;
+    margin-top: 4vh;
+    padding: 0 2vw;
+    display: block;
+    background-color: white;
+  }
+
+  .admin-container h2{
+    text-align: center;
+  }
+
+@media only screen and (max-width: 900px) {
+  .admin-container{
+    border: solid 1px #cccccc;
+    width: 90vw;
+    margin: auto;
+    margin-top: 4vh;
+    padding: 0 2vw;
+    display: block;
+    background-color: white;
+  }
+
+  .admin-container h2{
+    text-align: center;
+  }
+
+}
+
+
+
+label {
+  color: #cccccc;
+}
+
+
+
+.form-table{
+  width: 100%;
+}
+
+.trix-content{
+  color: #cccccc;
+  font-family: 'Montserrat', sans-serif;
+}
 
 
 
 
 
-
-
-
-
-
-
+table.scaffold-index td{
+  vertical-align: top;
+  color: #cccccc;
+}

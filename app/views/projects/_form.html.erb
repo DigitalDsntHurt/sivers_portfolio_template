@@ -1,0 +1,107 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="field">
+          <%= form.label :project_title %>
+          <%= form.text_field :title %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= form.label :portfolio_group %>
+          <%= form.text_field :portfolio_group %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+          <%= form.label :role %>
+          <%= form.text_field :role %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= form.label :organization %>
+          <%= form.text_field :organization %>
+        </div> 
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+          <%= form.label :industry %>
+          <%= form.text_field :industry %>
+        </div>       
+      </td>
+      <td>
+        <div class="field">
+          <%= form.label :project_type %>
+          <%= form.text_field :project_type %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+          <%= form.label :skills %>
+          <%= form.text_field :skills %>
+        </div>  
+      </td>
+      <td>
+        <div class="field">
+          <%= form.label :technologies %>
+          <%= form.text_field :technologies %>
+        </div>      
+      </td>
+    </tr>
+  </table>
+
+  <div class="field">
+    <%= form.label :organization_context %>
+    <%= form.rich_text_area :organization_context %>
+  </div>      
+  
+
+  <div class="field">
+    <%= form.label :project_context %>
+    <%= form.rich_text_area :project_context %>
+  </div>
+
+  <div class="field">
+    <%= form.label :problem %>
+    <%= form.rich_text_area :problem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :solution_parameters %>
+    <%= form.rich_text_area :solution_parameters %>
+  </div>
+
+  <div class="field">
+    <%= form.label :process %>
+    <%= form.rich_text_area :process %>
+  </div>
+
+  <div class="field">
+    <%= form.label :solution %>
+    <%= form.rich_text_area :solution %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
