@@ -1,6 +1,47 @@
+<% provide(:title, "Projects") %>
 <p id="notice"><%= notice %></p>
 
+<table align="center">
+  <tr>
+    <td>
+      <h2>Projects</h2>      
+    </td>
+    <td style="vertical-align: bottom;">
+      <%= link_to 'New Project', new_project_path %>
+    </td>
+  </tr>
+</table>
 
+
+
+<div class="poster-board">
+  <% @projects.in_groups_of(2).each do |project_group| %>
+
+      <% project_group.each{ |proj| %>
+        <% unless proj.nil? %>
+          <div class="poster">
+            <div class="poster-head">
+              <%= link_to proj.title, proj %> <small>(<%= proj.portfolio_group %>)</small>
+            </div>
+            <div class="poster-body">
+              <%= proj.summary %>
+            </div>
+          </div>
+        <% end %>
+      <% } %>  
+    
+  <% end %>  
+</div>
+  
+
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<hr>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 
 <h2>Projects</h2>
 <%= link_to 'New Project', new_project_path %>
