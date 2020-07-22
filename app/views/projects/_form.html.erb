@@ -71,10 +71,14 @@
   </table>
 
   <div class="field">
+    <%= form.label :summary %>
+    <%= form.rich_text_area :summary %>
+  </div>
+
+  <div class="field">
     <%= form.label :organization_context %>
     <%= form.rich_text_area :organization_context %>
-  </div>      
-  
+  </div>
 
   <div class="field">
     <%= form.label :project_context %>

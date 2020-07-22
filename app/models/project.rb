@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+  has_rich_text :summary
   has_rich_text :organization_context
   has_rich_text :project_context
   has_rich_text :problem
