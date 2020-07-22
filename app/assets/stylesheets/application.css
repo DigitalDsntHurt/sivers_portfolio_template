@@ -29,6 +29,29 @@ body{
 	}	
 }
 
+
+.mast-containter{
+
+}
+
+
+table.mast td{
+  vertical-align: top;
+}
+
+.big-mast{
+  font-size: 3em;
+  font-family: 'Crimson Text', serif;
+  margin: 4vh 0 4vh 0 ;
+  display: inline-block;
+}
+.small-mast{
+  font-size: 2em;
+  font-family: 'Crimson Text', serif;
+  color: #3b8524;
+  display: inline-block;
+}
+
 h1{
 	color: #3b8524;
 	font-size: 6em;

@@ -17,20 +17,35 @@
   </head>
 
   <body>
-    <table><tr>
-      <td><h1><%= link_to "Nick Smith", root_path, class: "header-link" %></h1></td>
-      <td>
-        <h2> 
+    <div class="mast-containter">
+      <div class="big-mast">
+        <%= link_to "Nick Smith", root_path, class: "header-link" %>
+      </div>
+      <div class="small-mast">
+        <% if yield(:title).empty? %>
+            
+          <% else %>
+            > <%= yield(:title) %>
+          <% end %>
+      </div>
+    </div>
+
+    <% if false %>
+
+    <table class='mast'><tr>
+      <td class="mast-big">
+        <%= link_to "Nick Smith", root_path, class: "header-link" %>
+      </td>
+      <td class="mast-small">
           <% if yield(:title).empty? %>
             
           <% else %>
             > <%= yield(:title) %>
           <% end %>
-        
-        </h2>
       </td>
     </tr></table>
     
+    <% end %>
     
     <%= yield %>
   </body>

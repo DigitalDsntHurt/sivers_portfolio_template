@@ -1,15 +1,16 @@
 <% provide(:title, "Products I've Built") %>
 
+<% if false %>
 <p>
 	<span class="small">
 		<span class="italic"><span class="bold">Disclaimer:</span> I've never served as a product manager in title. But making things is what I do and through my career I have managed many products from problem identification, ideation and conception through to planning and execution. Here are a few of them...</span>
 	</span>	
 </p>
-
+<% end %>
 
 <% @product_projects.each{|proj| %>
-	<h3><%= proj.title %></h3>
-	<p>Project Summary</p> 
+	<p><%= proj.title %></p>
+	<p><small>Project Summary</small></p> 
 	<p><%= proj.summary %></p>
 	<%= link_to "Learn more about the project here.", proj %>
 	<hr>
