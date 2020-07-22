@@ -18,7 +18,7 @@
 body{
 	background-color: black;
 	padding: 0 2vw;
-	margin: -2vh 0 12vh 0;
+	margin: 0vh 0 12vh 0;
 }
 
 @media only screen and (min-width: 900px) {
@@ -43,6 +43,10 @@ a.header-link{
 a.header-link:hover{
 	color: #3b8524;
 	text-decoration: underline;
+}
+a.header-link:visited{
+  color: #3b8524;
+  text-decoration: underline;
 }
 
 h2{
@@ -83,6 +87,11 @@ a{
 a:hover{
 		color: #868bf7;
 		text-decoration: underline;
+}
+
+a:visited{
+    color: #868bf7;
+    text-decoration: underline;
 }
 
 

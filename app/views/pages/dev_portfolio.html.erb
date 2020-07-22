@@ -1,9 +1,9 @@
-<h2>Portfolio Of Work</h2>
-<h2><span class="small">Software Development</span></h2>
+<% provide(:title, "Software I've Developed") %>
 
 <% @dev_projects.each{|proj| %>
 	<h3><%= proj.title %></h3>
-	<p><strong>summary:</strong> <%= proj.summary %></p>
-	Learn <%= link_to "more about the project", proj %>.
+	<p>Project Summary</p> 
+	<p><%= proj.summary %></p>
+	<%= link_to "Learn more about the project here.", proj %>
 	<hr>
 <% } %>

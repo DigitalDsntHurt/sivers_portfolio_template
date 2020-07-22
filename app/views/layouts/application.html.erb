@@ -17,7 +17,21 @@
   </head>
 
   <body>
-    <h1><%= link_to "Nick Smith", root_path, class: "header-link" %></h1>
+    <table><tr>
+      <td><h1><%= link_to "Nick Smith", root_path, class: "header-link" %></h1></td>
+      <td>
+        <h2> 
+          <% if yield(:title).empty? %>
+            
+          <% else %>
+            > <%= yield(:title) %>
+          <% end %>
+        
+        </h2>
+      </td>
+    </tr></table>
+    
+    
     <%= yield %>
   </body>
 </html>
