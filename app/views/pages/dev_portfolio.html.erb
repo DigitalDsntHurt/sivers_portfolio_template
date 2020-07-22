@@ -1,1 +1,9 @@
-<h2>Portfolio Of Work: <span class="small">Software Development</span></h2>
+<h2>Portfolio Of Work</h2>
+<h2><span class="small">Software Development</span></h2>
+
+<% @dev_projects.each{|proj| %>
+	<h3><%= proj.title %></h3>
+	<p><strong>summary:</strong> <%= proj.summary %></p>
+	Learn <%= link_to "more about the project", proj %>.
+	<hr>
+<% } %>

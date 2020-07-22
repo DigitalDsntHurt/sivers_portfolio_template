@@ -12,9 +12,11 @@ class PagesController < ApplicationController
   end
 
   def product_portfolio
+    @product_projects = Project.where(portfolio_group: "product")
   end
 
   def dev_portfolio
+    @dev_projects = Project.where(portfolio_group: "dev")
   end
 
   def contact
