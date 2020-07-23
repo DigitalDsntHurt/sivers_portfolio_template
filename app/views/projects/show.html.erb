@@ -3,78 +3,110 @@
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<h2><%= @project.title %></h2>
 
-<p>
-  <strong>Portfolio group:</strong>
-  <%= @project.portfolio_group %>
-</p>
+<table class="detail-table">
+  <thead>
+    <% unless @project.role.empty? %>
+      <th scope="col">role</th>
+    <% end -%>
+    <% unless @project.organization.empty? %>
+      <th scope="col">organization</th>
+    <% end -%>
+    <% unless @project.industry.empty? %>  
+      <th scope="col">industry</th>
+    <% end -%>
+    <% unless @project.project_type.empty? %>
+      <th scope="col">project type</th>
+    <% end -%>
+    <% unless @project.skills.empty? %>
+      <th scope="col">skills</th>
+    <% end -%>  
+    <% unless @project.technologies.empty? %>
+      <th scope="col">technologies</th>
+    <% end -%>
+  </thead>
+  <tr>
+    <% unless @project.role.empty? %>
+      <td data-label="role">
+        <%= @project.role %>
+      </td>
+    <% end -%>  
+    <% unless @project.organization.empty? %>
+      <td data-label="organization">
+        <%= @project.organization %>
+      </td>
+    <% end -%>
+    <% unless @project.industry.empty? %>  
+      <td data-label="industry">
+        <%= @project.industry %>
+      </td>
+    <% end -%>
+    <% unless @project.project_type.empty? %>  
+      <td data-label="project type">
+        <%= @project.project_type %>
+      </td>
+    <% end -%>
+    <% unless @project.skills.empty? %>
+      <td data-label="skills">
+        <%= @project.skills %>
+      </td>
+    <% end -%>
+    <% unless @project.technologies.empty? %>
+      <td data-label="technologies">
+        <%= @project.technologies %>
+      </td>
+    <% end -%>
+  </tr>
+</table>
 
-<p>
-  <strong>Role:</strong>
-  <%= @project.role %>
-</p>
 
-<p>
-  <strong>Organization:</strong>
-  <%= @project.organization %>
-</p>
 
+<% unless @project.summary.empty? %>
 <p>
-  <strong>Industry:</strong>
-  <%= @project.industry %>
-</p>
-
-<p>
-  <strong>Project type:</strong>
-  <%= @project.project_type %>
-</p>
-
-<p>
-  <strong>Skills:</strong>
-  <%= @project.skills %>
-</p>
-
-<p>
-  <strong>Technologies:</strong>
-  <%= @project.technologies %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
+  <strong>Summary</strong>
   <%= @project.summary %>
 </p>
+<% end -%>
 
+<% unless @project.organization_context.empty? %>
 <p>
   <strong>Organization context:</strong>
   <%= @project.organization_context %>
 </p>
+<% end -%>
 
+<% unless @project.project_context.empty? %>
 <p>
   <strong>Project context:</strong>
   <%= @project.project_context %>
 </p>
+<% end -%>
 
+<% unless @project.problem.empty? %>
 <p>
   <strong>Problem:</strong>
   <%= @project.problem %>
 </p>
+<% end -%>
 
+<% unless @project.solution_parameters.empty? %>
 <p>
   <strong>Solution parameters:</strong>
   <%= @project.solution_parameters %>
 </p>
+<% end -%>
 
+<% unless @project.process.empty? %>
 <p>
   <strong>Process:</strong>
   <%= @project.process %>
 </p>
+<% end -%>
 
+<% unless @project.solution.empty? %>
 <p>
   <strong>Solution:</strong>
   <%= @project.solution %>
 </p>
-
+<% end %>
