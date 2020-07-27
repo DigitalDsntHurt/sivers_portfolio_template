@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
   def home
+    @ten_secs = TextBlock.where(shortname: "me in 10 seconds")[0].body
   end
 
   def about
+    @about = TextBlock.where(shortname: "about")[0].body
   end
 
   def now

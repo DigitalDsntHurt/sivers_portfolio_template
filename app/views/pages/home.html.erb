@@ -1,15 +1,18 @@
 
 
 <h2>Me in 10 seconds</h2>
-<%= TextBlock.where(shortname: "me in 10 seconds")[0].body %>
+<%= @ten_secs %>
 
 <h2>Stuff I've Made</h2>
 <p><%= link_to "Product management portfolio", pages_product_portfolio_path %></p>
 <p><%= link_to "Software development portfolio", pages_dev_portfolio_path %></p> 
 <p><%= link_to "Everywhere I've ever worked", pages_resume_path %></p> 
 
+<h2>Me in 10 minutes?</h2>
+<p>See my <%= link_to "about", pages_about_path%> page.</p>
+
 <h2>Contact</h2>
-<p><%= link_to "What I'm looking for professionally right now", pages_intention_path %></p>
+<p><%= link_to "What I'm looking for right now", pages_intention_path %></p>
 <p>Email me at <%= mail_to "digitaldoesnthurt@gmail.com", "digitaldoesnthurt@gmail.com" %></p>
 
 
@@ -17,8 +20,7 @@
 <% if false %>
 
 
-<h2>Me in 10 minutes?</h2>
-<p>See my <%= link_to "about", pages_about_path%> page.</p>
+
 
 <h2>What am i doing now?</h2>
 <p>See my "<%= link_to "now", pages_now_path %>" page.</p>
