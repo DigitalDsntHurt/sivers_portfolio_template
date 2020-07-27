@@ -29,6 +29,17 @@ body{
 	}	
 }
 
+table th{
+  color: #cccccc;
+  font-size: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+table td{
+  color: #cccccc;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
 
 .mast-containter{
 

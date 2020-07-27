@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :text_blocks
+  resources :jobs
   resources :projects
   get 'pages/resume'
   get 'pages/intention'

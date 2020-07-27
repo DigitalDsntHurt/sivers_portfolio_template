@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def intention
+    @intention = TextBlock.where(shortname: "intention")[0]
   end
 
   def product_portfolio

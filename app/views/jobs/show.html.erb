@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Years:</strong>
+  <%= @job.year %>
+  <% if @job.end_year? %>
+   - <%= @job.end_year %>
+   <% else %>
+   <% end -%>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @job.title %>
+</p>
+
+<p>
+  <strong>Org:</strong>
+  <%= @job.org %>
+</p>
+
+<p>
+  <strong>Org summary:</strong>
+  <%= @job.org_summary %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @job.summary %>
+</p>
+
+<p>
+  <strong>Highlights:</strong>
+  <%= @job.highlights %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
